@@ -7,6 +7,10 @@ const PORT = process.env.PORT || 3000;
 
 app.use(cors());
 
+app.get("/", (req, res) => {
+  res.redirect("/me");
+});
+
 app.get('/me', async (req, res) => {
     try {
         //fetch random cat fact
